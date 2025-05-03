@@ -26,13 +26,13 @@ body {
 }
 
 .card {
-  max-width: 800px;
+  max-width: 850px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .column {
-  padding: 2em;
+  padding: 2.5em;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -161,7 +161,7 @@ body {
   }
 }
 
-@media (min-width: 601px) and (max-width: 832px) {
+@media (min-width: 601px) and (max-width: 882px) {
   .card {
     margin: 1em;
   }
