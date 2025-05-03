@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color: hsla(0, 0%, 100%, 0.75);
+  --background-color: hsl(0, 0%, 95%);
+  --column1: hsl(31, 77%, 52%);
+  --column2: hsl(184, 100%, 22%);
+  --column3: hsl(179, 100%, 13%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.card {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column {
+  padding: 2em;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sedan {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--column1);
+}
+
+.suv {
+  background-color: var(--column2);
+}
+
+.luxury {
+  background-color: var(--column3);
+  border-radius: 0 10px 10px 0;
+}
+
+.card h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
+  color: var(--background-color);
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.card p {
+  color: var(--color);
+  margin: 1em 0 4em;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.learn-btn {
+  background-color: var(--background-color);
+  border-radius: 30px;
+  display: block;
+  width: 70%;
+  text-decoration: none;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.sedan .learn-btn {
+  color: var(--column1);
+}
+
+.suv .learn-btn {
+  color: var(--column2);
+}
+
+.luxury .learn-btn {
+  color: var(--column3);
+}
+
+.sedan .learn-btn:hover {
+  color: var(--color);
+  background-color: var(--column1);
+  border: 2px solid var(--background-color);
+}
+
+.suv .learn-btn:hover {
+  color: var(--color);
+  background-color: var(--column2);
+  border: 2px solid var(--background-color);
+}
+
+.luxury .learn-btn:hover {
+  color: var(--color);
+  background-color: var(--column3);
+  border: 2px solid var(--background-color);
+}
+
+.card.img {
+  width: 60px;
+  height: 40px;
+}
+
+.attribution {
+  color: var(--column2);
+  padding: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 420px) {
+  .card {
+    margin: 3em auto;
+    display: block;
+    max-width: 300px;
+  }
+
+  .sedan {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 600px) {
+  .card {
+    display: block;
+    max-width: 400px;
+    margin: 3em auto;
+  }
+
+  .sedan {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 832px) {
+  .card {
+    margin: 1em;
+  }
+}
