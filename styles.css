@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  font-size: 15px;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
 }
 
 .card {
-  display: flex;
+  display: grid;
 }
 
 .column {
@@ -64,7 +65,6 @@ body {
 .card p {
   color: var(--color);
   margin-bottom: 6em;
-  font-size: 15px;
   line-height: 150%;
 }
 
@@ -130,7 +130,6 @@ body {
 
 @media only screen and (max-width: 600px) {
   .card {
-    flex-direction: column;
     width: 90%;
     max-width: 400px;
     min-width: 200px;
@@ -161,7 +160,6 @@ body {
   }
 
   .learn-btn {
-    display: block;
     width: 140px;
     padding: 1em 0;
   }
@@ -170,15 +168,9 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .card {
-    flex-grow: 1;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 80%;
     max-width: 600px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .column {
-    height: 476px;
   }
 
   .sedan {
@@ -197,45 +189,12 @@ body {
     max-width: 875px;
     width: 60%;
   }
-
-  .sedan {
-    border-radius: 10px 0 0 10px;
-  }
-
-  .luxury {
-    border-radius: 0 10px 10px 0;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .card {
-    width: 60%;
-    max-width: 1200px;
-    font-size: 32px;
-  }
-
-  .column {
-    height: 1200px;
-  }
-
-  .card p {
-    font-size: 32px;
+    width: 70%;
+    max-width: 1500px;
   }
 }
-
-/*
-
-
-.learn-btn {
-
-  display: block;
-  text-decoration: none;
-  padding: 14px 30px;
-  text-align: center;
-  font-size: 15px;
-  position: absolute;
-  bottom: 3em;
-  left: 3em;
-}
- */
